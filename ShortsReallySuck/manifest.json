@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "YouTube Shorts Really Suck",
+  "version": "1.0",
+
+  "description": "Redirects YouTube shorts to the normal player instead of the shorts player.",
+
+  "icons": {
+    "48": "icons/NoShorts.svg",
+    "96": "icons/NoShorts.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["YTSS.js"]
+    }
+  ]
+
+}

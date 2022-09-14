@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "YouTube Shorts Suck",
+  "version": "1.0",
+
+  "description": "Adds a button to YouTube shorts that open the normal player instead of the shorts player.",
+
+  "icons": {
+    "48": "icons/NoShorts.svg",
+    "96": "icons/NoShorts.svg"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/shorts/*"],
+      "js": ["YTSS.js"]
+    }
+  ]
+
+}
