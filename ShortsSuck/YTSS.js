@@ -17,9 +17,13 @@ function waitForElm(selector) {
         });
     });
 }
-waitForElm("div#actions").then((menu) =>{
-	btn = document.createElement("button")
-	btn.textContent = "Full Player"
-	btn.addEventListener("click", function(){location.href =  location.href.replace("shorts/","watch?v=")})
-	menu.appendChild(btn)
-})
+
+function addbutton(){
+	waitForElm("div#actions").then((menu) =>{
+		btn = document.createElement("button")
+		btn.textContent = "Full Player"
+		btn.addEventListener("click", function(){location.href =  location.href.replace("shorts/","watch?v=")})
+		menu.appendChild(btn)
+})}
+
+window.addEventListener('yt-page-data-updated',() => addbutton())
